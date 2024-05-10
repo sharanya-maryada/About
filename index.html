@@ -5,131 +5,163 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharanya's Portfolio</title>
   <style>
+    /* General body styles */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #ececec;
+      background-color: #f0f0f0;
       line-height: 1.6;
     }
+
+    /* Header styling */
     header {
-      background: #333;
-      color: white;
+      background: #27496d; /* Dark blue background */
+      color: #ffffff;
       text-align: center;
-      padding: 1rem 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 1.2rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      font-weight: 300;
     }
+
+    /* Main container for content */
     .container {
       width: 85%;
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 1100px;
+      margin: 25px auto;
+      padding: 25px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
+
+    /* Profile image styling */
     .profile-img {
       display: block;
-      width: 250px; /* Increased size */
-      height: 250px;
+      max-width: 180px; /* Set a max width for the image */
+      height: auto;
       border-radius: 50%;
       margin: 0 auto 20px;
-      object-fit: cover;
-      border: 5px solid #ddd; /* Stylish border for the image */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
+    /* Centered text for the 'About Me' section */
     .about-me {
       text-align: center;
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
+
+    /* Section base styles */
     section {
       margin-bottom: 40px;
       padding: 20px;
+      border-left: 4px solid #27496d; /* Add an accent bar */
     }
+
+    /* Styling for all heading elements */
     h1, h2, h3 {
       color: #333;
+      font-weight: 400;
     }
+
     h2 {
-      color: #005691;
-      border-bottom: 3px solid #005691;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      color: #27496d; /* Consistent color for secondary headings */
       text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f1c40f; /* A gold underline */
+      font-size: 2.2em;
     }
+
     h3 {
-      color: #333;
+      font-size: 1.4em;
       margin-top: 15px;
-      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #333; /* Dark text for tertiary headings */
     }
-    p {
+
+    p, li {
       font-size: 1.1em;
       line-height: 1.7;
-      color: #666;
+      color: #666; /* Soft text color for readability */
     }
+
+    /* Unordered list styles */
     ul {
       list-style: none;
       padding: 0;
     }
+
+    /* Skills and experience list styles */
     ul.skills-list, ul.experience-list {
       margin: 0;
       padding: 0;
     }
+
     ul.skills-list li, ul.experience-list li {
-      background: #f4f4f4;
+      background: #f9f9f9;
       margin-bottom: 10px;
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
-      box-shadow: inset 0 0 10px #e3e3e3;
+      box-shadow: inset 0 0 8px #e3e3e3;
+      font-weight: 300; /* Lighter font for list items */
     }
-    ul.skills-list li strong, ul.experience-list li strong {
-      color: #333;
-    }
+
+    /* Link styling */
     a {
       color: #2980b9;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    /* Footer styling */
     footer {
       text-align: center;
       padding: 20px 10px;
-      background: #333;
+      background: #27496d;
       color: white;
       font-size: 1em;
     }
+
     .contact-info {
-      background-color: #e7f1ff;
+      background-color: #eaf1f8;
       color: #333;
       padding: 15px;
-      margin: 0 0 20px 0;
+      margin: 15px 0;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
+
     .contact-info a {
-      color: #005691;
+      color: #0056b3;
       font-weight: bold;
     }
+
     .contact-info p {
       margin: 10px 0;
     }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       h1, h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
       }
       .container {
         width: 95%;
-        padding: 10px;
+        padding: 15px;
       }
       .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
       }
     }
   </style>
