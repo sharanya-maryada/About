@@ -53,9 +53,10 @@
 
     /* Profile image styling */
     .profile-img {
-      flex: 1 1 300px; /* flex-basis and increased size */
-      max-width: 300px; /* Increased size */
-      max-height: 300px;
+      flex: 0 0 200px; /* flex-basis set to image width */
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
       margin: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       object-fit: cover; /* Ensure the image covers the area */
@@ -63,8 +64,9 @@
 
     /* About text styling */
     .about-text {
-      flex: 2 1 60%; /* Adjusted for balance */
+      flex: 1; /* Take up remaining space */
       padding: 10px;
+      max-width: calc(100% - 220px); /* Calculation to prevent overflow */
       text-align: justify;
     }
 
@@ -130,9 +132,6 @@
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
     }
 
     .contact-info p {
@@ -148,9 +147,8 @@
 
       .profile-img {
         margin: 0 auto;
-        width: 80%; /* Responsive image size */
-        max-width: 200px;
-        height: auto;
+        width: 160px;
+        height: 160px;
       }
 
       .about-text {
@@ -160,11 +158,6 @@
 
       h2 {
         font-size: 1.5em;
-      }
-
-      .contact-info {
-        flex-direction: column;
-        text-align: center;
       }
     }
   </style>
