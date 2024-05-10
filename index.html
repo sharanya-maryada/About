@@ -10,55 +10,86 @@
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #fafafa;
+      background-color: #ececec;
       line-height: 1.6;
     }
     header {
-      background: #005691;
+      background: #333;
       color: white;
       text-align: center;
       padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     header h1 {
       margin: 0;
+      font-size: 2.5em;
     }
     .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
+      width: 85%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .profile-img {
+      display: block;
+      width: 250px; /* Increased size */
+      height: 250px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      object-fit: cover;
+      border: 5px solid #ddd; /* Stylish border for the image */
+    }
+    .about-me {
+      text-align: center;
+      margin: 20px 0;
     }
     section {
-      background: white;
-      border-radius: 8px;
-      margin: 20px 0;
+      margin-bottom: 40px;
       padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    img.profile-img {
-      display: block;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 20px auto;
     }
     h1, h2, h3 {
       color: #333;
     }
     h2 {
-      border-bottom: 2px solid #E07C24;
+      color: #005691;
+      border-bottom: 3px solid #005691;
       padding-bottom: 10px;
-      color: #D35400; /* Lively Orange */
+      margin-bottom: 20px;
+      text-align: center;
     }
     h3 {
-      color: #27AE60; /* Soothing Green */
-      margin-top: 10px;
+      color: #333;
+      margin-top: 15px;
+      font-size: 1.2em;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      color: #666;
     }
     ul {
-      list-style: inside square;
+      list-style: none;
       padding: 0;
     }
+    ul.skills-list, ul.experience-list {
+      margin: 0;
+      padding: 0;
+    }
+    ul.skills-list li, ul.experience-list li {
+      background: #f4f4f4;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 10px #e3e3e3;
+    }
+    ul.skills-list li strong, ul.experience-list li strong {
+      color: #333;
+    }
     a {
-      color: #2980B9; /* Blue */
+      color: #2980b9;
       text-decoration: none;
     }
     a:hover {
@@ -66,32 +97,40 @@
     }
     footer {
       text-align: center;
-      padding: 10px;
+      padding: 20px 10px;
       background: #333;
       color: white;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    .skills-list, .experience-list {
-      margin: 0;
-      padding: 0;
-    }
-    .skills-list li, .experience-list li {
-      margin-bottom: 10px;
+      font-size: 1em;
     }
     .contact-info {
-      background-color: #EAF2F8; /* Light Blue */
+      background-color: #e7f1ff;
+      color: #333;
       padding: 15px;
-      margin: 15px 0;
+      margin: 0 0 20px 0;
       border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
     .contact-info a {
-      color: #3498DB; /* Brighter Blue */
+      color: #005691;
+      font-weight: bold;
     }
     .contact-info p {
-      margin: 5px 0;
+      margin: 10px 0;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1, h2 {
+        font-size: 1.5em;
+      }
+      .container {
+        width: 95%;
+        padding: 10px;
+      }
+      .profile-img {
+        width: 200px;
+        height: 200px;
+      }
     }
   </style>
 </head>
@@ -109,8 +148,10 @@
 
     <section id="about">
       <img src="ssimage.png" alt="Sharanya" class="profile-img">
-      <h2>About Me</h2>
-      <p>I am a graduate of Northeastern University with a Master's degree in Data Analytics and a background in Information Technology from Jawaharlal Nehru Technological University. I specialize in data analysis, machine learning, and data engineering.</p>
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>I am a graduate of Northeastern University with a Master's degree in Data Analytics and a background in Information Technology from Jawaharlal Nehru Technological University. I specialize in data analysis, machine learning, and data engineering.</p>
+      </div>
     </section>
 
     <section id="education">
