@@ -5,117 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sharanya's Portfolio</title>
   <style>
-    /* General body styles */
+    /* Base body styles */
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #f0f0f0;
-      line-height: 1.6;
+      background-color: #f7f7f7;
+      line-height: 1.5;
     }
 
     /* Header styling */
     header {
-      background: #27496d; /* Dark blue background */
-      color: #ffffff;
+      background: #333; /* Dark gray background */
+      color: white;
       text-align: center;
-      padding: 1.2rem 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.8em;
-      font-weight: 300;
+      font-size: 2.5em;
+      font-weight: normal;
     }
 
-    /* Main container for content */
+    /* Main container */
     .container {
-      width: 85%;
-      max-width: 1100px;
-      margin: 25px auto;
-      padding: 25px;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Flexbox setup for the about me section */
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
     }
 
     /* Profile image styling */
     .profile-img {
-      display: block;
-      max-width: 180px; /* Set a max width for the image */
-      height: auto;
+      flex: 0 0 200px; /* flex-basis set to image width */
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      margin: 0 auto 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      object-fit: cover; /* Ensure the image covers the area */
     }
 
-    /* Centered text for the 'About Me' section */
-    .about-me {
-      text-align: center;
-      margin-bottom: 20px;
+    /* About text styling */
+    .about-text {
+      flex: 1; /* Take up remaining space */
+      padding: 10px;
+      max-width: calc(100% - 220px); /* Calculation to prevent overflow */
+      text-align: justify;
     }
 
-    /* Section base styles */
+    /* Section styling */
     section {
-      margin-bottom: 40px;
+      margin-bottom: 1rem;
       padding: 20px;
-      border-left: 4px solid #27496d; /* Add an accent bar */
-    }
-
-    /* Styling for all heading elements */
-    h1, h2, h3 {
-      color: #333;
-      font-weight: 400;
     }
 
     h2 {
-      color: #27496d; /* Consistent color for secondary headings */
-      text-align: center;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #f1c40f; /* A gold underline */
-      font-size: 2.2em;
+      color: #0056b3; /* Blue for headings */
+      margin: 0.5em 0;
+      padding-bottom: 0.3em;
+      border-bottom: 2px solid #0056b3;
+      font-size: 1.8em;
     }
 
     h3 {
-      font-size: 1.4em;
-      margin-top: 15px;
-      margin-bottom: 10px;
-      color: #333; /* Dark text for tertiary headings */
+      font-size: 1.2em;
+      margin-top: 0;
+      color: #333;
     }
 
-    p, li {
-      font-size: 1.1em;
-      line-height: 1.7;
-      color: #666; /* Soft text color for readability */
-    }
-
-    /* Unordered list styles */
+    /* Styling for lists of skills and experience */
     ul {
       list-style: none;
       padding: 0;
     }
 
-    /* Skills and experience list styles */
-    ul.skills-list, ul.experience-list {
-      margin: 0;
-      padding: 0;
-    }
-
     ul.skills-list li, ul.experience-list li {
-      background: #f9f9f9;
+      background: #e9ecef;
+      padding: 10px;
       margin-bottom: 10px;
-      padding: 12px;
       border-radius: 8px;
-      box-shadow: inset 0 0 8px #e3e3e3;
-      font-weight: 300; /* Lighter font for list items */
     }
 
     /* Link styling */
     a {
-      color: #2980b9;
+      color: #007bff; /* Bootstrap primary blue */
       text-decoration: none;
     }
 
@@ -126,42 +115,48 @@
     /* Footer styling */
     footer {
       text-align: center;
-      padding: 20px 10px;
-      background: #27496d;
+      padding: 1rem 0;
+      background: #333;
       color: white;
       font-size: 1em;
+      margin-top: 20px;
     }
 
+    /* Contact information styling */
     .contact-info {
-      background-color: #eaf1f8;
+      background-color: #e9ecef;
       color: #333;
       padding: 15px;
-      margin: 15px 0;
+      margin: 0 0 1rem 0;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
-    }
-
-    .contact-info a {
-      color: #0056b3;
-      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .contact-info p {
       margin: 10px 0;
     }
 
-    /* Responsive adjustments */
+    /* Responsive design adjustments */
     @media (max-width: 768px) {
-      h1, h2 {
-        font-size: 1.8em;
+      .about {
+        flex-direction: column;
+        text-align: center;
       }
-      .container {
-        width: 95%;
-        padding: 15px;
-      }
+
       .profile-img {
-        width: 150px;
+        margin: 0 auto;
+        width: 160px;
+        height: 160px;
+      }
+
+      .about-text {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -178,9 +173,9 @@
       <p><strong>Phone:</strong> <a href="tel:+16178357609">617-835-7609</a></p>
     </section>
 
-    <section id="about">
+    <section class="about">
       <img src="ssimage.png" alt="Sharanya" class="profile-img">
-      <div class="about-me">
+      <div class="about-text">
         <h2>About Me</h2>
         <p>I am a graduate of Northeastern University with a Master's degree in Data Analytics and a background in Information Technology from Jawaharlal Nehru Technological University. I specialize in data analysis, machine learning, and data engineering.</p>
       </div>
