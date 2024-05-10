@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Portfolio</title>
+  <title>Sharanya</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #f4f4f4;
+      background-color: #fafafa;
+      line-height: 1.6;
     }
-    header, footer {
-      background: #333;
+    header {
+      background: #005691;
       color: white;
       text-align: center;
       padding: 1rem 0;
+    }
+    header h1 {
+      margin: 0;
     }
     .container {
       width: 80%;
@@ -24,22 +28,67 @@
       overflow: hidden;
     }
     section {
+      background: white;
+      border-radius: 8px;
       margin: 20px 0;
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+    img.profile-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px auto;
+    }
+    h1, h2, h3 {
       color: #333;
+    }
+    h2 {
+      border-bottom: 2px solid #005691;
+      padding-bottom: 10px;
+    }
+    h3 {
+      color: #005691;
+      margin-top: 10px;
+    }
+    ul {
+      list-style: inside square;
+      padding: 0;
+    }
+    a {
+      color: #005691;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .skills-list, .experience-list {
+      margin: 0;
+      padding: 0;
+    }
+    .skills-list li, .experience-list li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>[Your Name]'s Portfolio</h1>
+    <h1>[Your Name]</h1>
   </header>
 
   <div class="container">
     <section id="about">
+      <img src="path/to/your_image.jpg" alt="Your Name" class="profile-img">
       <h2>About Me</h2>
       <p>I am a graduate of Northeastern University with a Master's degree in Data Analytics and a background in Information Technology from Jawaharlal Nehru Technological University. I specialize in data analysis, machine learning, and data engineering.</p>
     </section>
@@ -57,7 +106,7 @@
 
     <section id="skills">
       <h2>Technical Skills</h2>
-      <ul>
+      <ul class="skills-list">
         <li><strong>Languages:</strong> Python (Pandas, NumPy, PySpark, Seaborn, Matplotlib), R, SQL</li>
         <li><strong>Machine Learning:</strong> Regression, Random Forest, Time Series, Clustering</li>
         <li><strong>Databases:</strong> MySQL, PostgreSQL, Oracle SQL, Microsoft SQL Server, and more.</li>
@@ -69,13 +118,13 @@
     <section id="experience">
       <h2>Professional Experience</h2>
       <h3>Data Analyst, Brigham and Women’s General, Boston</h3>
-      <ul>
+      <ul class="experience-list">
         <li>Improved data quality by 30% in kidney cancer datasets.</li>
         <li>Enhanced stakeholder engagement by 25% using Power BI and Tableau.</li>
       </ul>
 
       <h3>Data Analyst, Darwinbox, Hyderabad</h3>
-      <ul>
+      <ul class="experience-list">
         <li>Enhanced data-driven decision-making in HR processes by 15%.</li>
         <li>Developed interactive Power BI dashboards for HR management.</li>
       </ul>
